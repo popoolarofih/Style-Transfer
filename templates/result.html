@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Style Transfer Result</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.result {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.result img {
+  display: block;
+  margin: 0 auto;  /* Centers the image horizontally */
+}
+
+    .result p {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.result p.success {
+  background-color: #dff0d8;
+  color: #468847;
+}
+
+.result p.error {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Style Transfer Result</h1>
+  {% if generated_image %}
+  <div class="result">
+    <img src="{{ generated_image }}"  class="rounded mx-auto d-block" alt="Styled Image">
+  </div>
+{% else %}
+  <div class="result">
+    <p class="error">An error occurred during processing.</p>
+  </div>
+{% endif %}
+    </div>
+  
+
+</body>
+</html>
