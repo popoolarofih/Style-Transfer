@@ -1,0 +1,6 @@
+flask
+Tensorflow
+matplotlib
+numpy
+functools
+tensorflow_hub
